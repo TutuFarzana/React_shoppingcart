@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.product-list {
+  list-style-type: none;
+}
+
+.image {
+  width: 139px;
+  height: 199px;
+}
+
+.product-div {
+  display: inline-block;
+  padding-top: 50px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+
+
+
+.goto-cart-btn {
+  float: right;
+  margin-top: 162px;
+  margin-right: 50px;
+}
+
+.cart-list {
+  display: inline-block;
+  list-style-type: none;
+  padding-top: 10px;
+  margin: 5px;
+  border-bottom: 1px #ccc solid;
+}
+
+.total-count {
+  float: right;
+  margin-top: 12%;
+  margin-right: -52px;
+}
+
+.display-book {
+  width: 250px;
+  display: inline-block;
+}
+
+.display-price {
+  width: 250px;
+  display: inline-block;
+}
+
+.display-count {
+  width: 250px;
+  display: inline-block;
+}
