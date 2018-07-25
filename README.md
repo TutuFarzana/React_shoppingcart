@@ -6,5 +6,6 @@ Type git clone, and then paste the URL you copied.
 Press Enter.
 Your local clone will be created.
 Enter into cloned directory.
+Add node modules to directory.
 Type npm start command.
 You will be directed to a website where you can see the Shopping Cart UI.
