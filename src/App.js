@@ -3,12 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 import ReactDOM from "react-dom";
 
+// Pages
 const pages = {
   PRODUCT_LIST: "PRODUCT_LIST",
   CART_LIST: "CART_LIST"
 };
 
+// Currentpage
 let currentPage = pages.PRODUCT_LIST;
+
+// List of products.
 const products = [
   {url : "https://s3.amazonaws.com/marquee-test-akiaisur2rgicbmpehea/NDwUWtlCRoegtF4zgten_pyramid.jpg", id: 1, name: "The Alchemist", price: 299, individualCount : 0},
   
@@ -21,6 +25,7 @@ const products = [
   {url : "https://d3525k1ryd2155.cloudfront.net/h/230/706/1101706230.0.b.jpg", id: 5, name: "The God Created the Integers", price: 899, individualCount : 0},
 ];
 
+// Add product to cart.
 const AddToCart = ({message, onClick}) => (
   <button className = "add-to-cart-button" onClick = {onClick}>
     {message} 
@@ -30,6 +35,7 @@ const AddToCart = ({message, onClick}) => (
 const cart = [];
 var quantity = 0;
 var subTotal = 0;
+
 
 const addToCart = Id => {
   quantity ++;
@@ -48,12 +54,14 @@ const goToCart = () => {
   renderApp();
 }
 
+// Button component
 const AddToCartButton = ({ message, onClick }) => (
   <button className="add-to-cart-btn" onClick={onClick}>
     {message}
   </button>
 );
 
+// Product component
 const Product = ({ url, id, name, price, individualCount}) => (
   <div className = "product-div">
     <img className = "image" src = {url} alt = {name}></img> <br />
@@ -64,6 +72,7 @@ const Product = ({ url, id, name, price, individualCount}) => (
   
 );
 
+// Cart component
 const Cart = ({ id, name, price, individualCount }) => (
   <li className="cart">
     <div className="display-book">{name} </div>
@@ -72,6 +81,7 @@ const Cart = ({ id, name, price, individualCount }) => (
   </li>
 );
 
+// ProductList component 
 const ProductList = () => (
   <React.Fragment>
     <ul className = "product-list">
@@ -80,6 +90,7 @@ const ProductList = () => (
   </React.Fragment>
 );
 
+// CartList component 
 const CartList = () => (
   <React.Fragment>
     <h2>Cart List</h2>
@@ -104,11 +115,13 @@ const CartList = () => (
   </React.Fragment>
 );
 
+// render, re-render app.
 const renderApp = () => {
   const rootElement = document.getElementById("root");
   ReactDOM.render(<App />, rootElement);
 };
 
+/* App component: root React component.*/
 const App = () => (
   <div className="App">
     
@@ -123,4 +136,4 @@ const App = () => (
 );
 
 export default App;
- renderApp();
+renderApp();
